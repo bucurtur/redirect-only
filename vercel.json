@@ -1,19 +1,11 @@
 {
   "redirects": [
-    {
-      "source": "/",
-      "destination": "https://bucurtur.md/",
-      "permanent": true
-    },
+    // 1. Highest priority: explicit redirects for known differences or special cases
+    // (add more if you find old pages that need special handling)
 
-    // === SPECIFIC REDIRECTS THAT MUST WIN (even if file exists) ===
+    // Example: if old had a generic /moldova-italia.html page → map to destinations index
     {
       "source": "/moldova-italia.html",
-      "destination": "https://bucurtur.md/transport-moldova-italia/index.html",
-      "permanent": true
-    },
-    {
-      "source": "/moldova-italia",
       "destination": "https://bucurtur.md/transport-moldova-italia/index.html",
       "permanent": true
     },
@@ -22,75 +14,31 @@
       "destination": "https://bucurtur.md/transport-moldova-italia/index.html",
       "permanent": true
     },
-    {
-      "source": "/italia-moldova",
-      "destination": "https://bucurtur.md/transport-moldova-italia/index.html",
-      "permanent": true
-    },
-    {
-      "source": "/transport-chisinau-italia.html",
-      "destination": "https://bucurtur.md/transport-moldova-italia/chisinau-italia.html",
-      "permanent": true
-    },
-    {
-      "source": "/transport-chisinau-italia",
-      "destination": "https://bucurtur.md/transport-moldova-italia/chisinau-italia.html",
-      "permanent": true
-    },
-    {
-      "source": "/about.html",
-      "destination": "https://bucurtur.md/despre-noi.html",
-      "permanent": true
-    },
-    {
-      "source": "/contact.html",
-      "destination": "https://bucurtur.md/",
-      "permanent": true
-    },
+
+    // Other known old pages (if they existed)
     {
       "source": "/cookie.html",
       "destination": "https://bucurtur.md/politica-de-confidentialitate.html",
       "permanent": true
     },
 
-    // === FORCE REDIRECT EVEN IF FILE EXISTS (using :path*.html trick) ===
+    // 2. Root and index
     {
-      "source": "/:path*.html",
-      "has": [
-        {
-          "type": "header",
-          "key": "host",
-          "value": "bucur-tur.com"
-        }
-      ],
-      "destination": "https://bucurtur.md/:path*",
+      "source": "/",
+      "destination": "https://bucurtur.md/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "https://bucurtur.md/",
       "permanent": true
     },
 
-    // === ALL OTHER REQUESTS FROM OLD DOMAIN → NEW DOMAIN (preserves path) ===
+    // 3. Preserve exact paths for all main files and subfolder (this handles most of your site!)
+    // Example: /despre-noi.html → https://bucurtur.md/despre-noi.html
+    //         /transport-moldova-italia/chisinau-italia.html → same on new site
     {
       "source": "/:path*",
-      "has": [
-        {
-          "type": "header",
-          "key": "host",
-          "value": "bucur-tur.com"
-        }
-      ],
-      "destination": "https://bucurtur.md/:path*",
-      "permanent": true
-    },
-
-    // === WWW version too (optional but recommended) ===
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "header",
-          "key": "host",
-          "value": "www.bucur-tur.com"
-        }
-      ],
       "destination": "https://bucurtur.md/:path*",
       "permanent": true
     }
