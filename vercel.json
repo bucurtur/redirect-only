@@ -3,14 +3,7 @@
     {
       "source": "/:path*",
       "destination": "https://bucurtur.md/:path*",
-      "permanent": true,
-      "has": [
-        {
-          "type": "header",
-          "key": "host",
-          "value": "bucur-tur.com"
-        }
-      ]
+      "permanent": true
     }
   ]
 }
