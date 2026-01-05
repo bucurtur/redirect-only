@@ -1,47 +1,33 @@
 {
   "redirects": [
-    // Specific rules – cover with AND without .html + trailing slash variations where useful
-    { "source": "/about.html",                    "destination": "https://bucurtur.md/despre-noi.html",                "permanent": true },
+    // Specific clean URLs (no .html) – these are the ones that matter most
     { "source": "/about",                         "destination": "https://bucurtur.md/despre-noi.html",                "permanent": true },
-    { "source": "/about/",                        "destination": "https://bucurtur.md/despre-noi.html",                "permanent": true },
-
-    { "source": "/contact.html",                  "destination": "https://bucurtur.md/",                               "permanent": true },
     { "source": "/contact",                       "destination": "https://bucurtur.md/",                               "permanent": true },
-
-    { "source": "/cookie.html",                   "destination": "https://bucurtur.md/politica-de-confidentialitate.html", "permanent": true },
     { "source": "/cookie",                        "destination": "https://bucurtur.md/politica-de-confidentialitate.html", "permanent": true },
-
-    { "source": "/index.html",                    "destination": "https://bucurtur.md/",                               "permanent": true },
-    { "source": "/",                              "destination": "https://bucurtur.md/",                               "permanent": true },
-
-    { "source": "/italia-moldova.html",           "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
     { "source": "/italia-moldova",                "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
-
-    { "source": "/moldova-italia.html",           "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
     { "source": "/moldova-italia",                "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
-
-    { "source": "/page-sidebar-left.html",        "destination": "https://bucurtur.md/",                               "permanent": true },
-    { "source": "/single-destination.html",       "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
-
-    { "source": "/transport-chisinau-italia.html","destination": "https://bucurtur.md/transport-moldova-italia/chisinau-italia.html", "permanent": true },
+    { "source": "/page-sidebar-left",             "destination": "https://bucurtur.md/",                               "permanent": true },
+    { "source": "/single-destination",            "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
     { "source": "/transport-chisinau-italia",     "destination": "https://bucurtur.md/transport-moldova-italia/chisinau-italia.html", "permanent": true },
-
-    { "source": "/transport-italia-moldova.html", "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
     { "source": "/transport-italia-moldova",      "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
-
-    { "source": "/transport-privat-italia.html",  "destination": "https://bucurtur.md/",                               "permanent": true },
     { "source": "/transport-privat-italia",       "destination": "https://bucurtur.md/",                               "permanent": true },
 
-    // Catch-all fallback – now with cleanups (remove .html if present on old side)
-    {
-      "source": "/:path*.html",
-      "destination": "https://bucurtur.md/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "destination": "https://bucurtur.md/:path*",
-      "permanent": true
-    }
+    // Also cover home and common variations
+    { "source": "/",                              "destination": "https://bucurtur.md/",                               "permanent": true },
+    { "source": "/index",                         "destination": "https://bucurtur.md/",                               "permanent": true },
+
+    // Optional: also cover .html versions in case some links still have them
+    { "source": "/about.html",                    "destination": "https://bucurtur.md/despre-noi.html",                "permanent": true },
+    { "source": "/contact.html",                  "destination": "https://bucurtur.md/",                               "permanent": true },
+    { "source": "/cookie.html",                   "destination": "https://bucurtur.md/politica-de-confidentialitate.html", "permanent": true },
+    { "source": "/italia-moldova.html",           "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
+    { "source": "/moldova-italia.html",           "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
+    { "source": "/transport-chisinau-italia.html","destination": "https://bucurtur.md/transport-moldova-italia/chisinau-italia.html", "permanent": true },
+    { "source": "/transport-italia-moldova.html", "destination": "https://bucurtur.md/transport-moldova-italia/index.html", "permanent": true },
+    { "source": "/transport-privat-italia.html",  "destination": "https://bucurtur.md/",                               "permanent": true },
+
+    // Safe catch-all fallback (strips .html if present)
+    { "source": "/:path*.html",                   "destination": "https://bucurtur.md/:path*",                         "permanent": true },
+    { "source": "/:path*",                        "destination": "https://bucurtur.md/:path*",                         "permanent": true }
   ]
 }
