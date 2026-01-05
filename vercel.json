@@ -1,46 +1,43 @@
 {
   "redirects": [
-    // 1. Specific redirects first (exceptions / special cases)
-    // Add more of these if you find pages that need a different target
+    // Specific exceptions first (if any path needs a different target)
     {
       "source": "/moldova-italia.html",
       "destination": "https://bucurtur.md/transport-moldova-italia/index.html",
-      "permanent": true
-    },
-    {
-      "source": "/italia-moldova.html",
-      "destination": "https://bucurtur.md/transport-moldova-italia/index.html",
-      "permanent": true
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "bucur-tur.com"
+        }
+      ]
     },
     {
       "source": "/cookie.html",
       "destination": "https://bucurtur.md/politica-de-confidentialitate.html",
-      "permanent": true
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "bucur-tur.com"
+        }
+      ]
     },
 
-    // 2. Root / homepage
-    {
-      "source": "/",
-      "destination": "https://bucurtur.md/",
-      "permanent": true
-    },
-    {
-      "source": "/index.html",
-      "destination": "https://bucurtur.md/",
-      "permanent": true
-    },
-
-    // 3. The most important rule → preserve paths for everything else
-    // This handles:
-    //   /despre-noi.html      → https://bucurtur.md/despre-noi.html
-    //   /tarife.html          → https://bucurtur.md/tarife.html
-    //   /transport-moldova-italia/chisinau-italia.html → same path on new site
-    //   /transport-moldova-italia/soroca-italia.html   → same path on new site
-    //   etc.
+    // Catch-all for everything on the old domain → preserve path on new domain
     {
       "source": "/:path*",
       "destination": "https://bucurtur.md/:path*",
-      "permanent": true
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "bucur-tur.com"
+        }
+      ]
     }
   ]
 }
