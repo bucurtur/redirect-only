@@ -1,3 +1,32 @@
+
+
+{
+  "redirects": [
+    // Force remove .html and redirect
+    {
+      "source": "/:path*.html",
+      "destination": "https://bucurtur.md/:path*",
+      "permanent": true
+    },
+    // Handle trailing slash
+    {
+      "source": "/:path*/",
+      "destination": "https://bucurtur.md/:path*",
+      "permanent": true
+    },
+
+    // ← keep all your specific rules here
+
+    // existing catch-all
+    {
+      "source": "/:path*",
+      "destination": "https://bucurtur.md/:path*",
+      "permanent": true
+    }
+  ]
+}
+
+
 {
   "redirects": [
     // Specific clean URLs (no .html) – these are the ones that matter most
