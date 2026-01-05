@@ -1,42 +1,5 @@
 {
   "redirects": [
-    // 1. Highest priority: explicit redirects for known differences or special cases
-    // (add more if you find old pages that need special handling)
-
-    // Example: if old had a generic /moldova-italia.html page → map to destinations index
-    {
-      "source": "/moldova-italia.html",
-      "destination": "https://bucurtur.md/transport-moldova-italia/index.html",
-      "permanent": true
-    },
-    {
-      "source": "/italia-moldova.html",
-      "destination": "https://bucurtur.md/transport-moldova-italia/index.html",
-      "permanent": true
-    },
-
-    // Other known old pages (if they existed)
-    {
-      "source": "/cookie.html",
-      "destination": "https://bucurtur.md/politica-de-confidentialitate.html",
-      "permanent": true
-    },
-
-    // 2. Root and index
-    {
-      "source": "/",
-      "destination": "https://bucurtur.md/",
-      "permanent": true
-    },
-    {
-      "source": "/index.html",
-      "destination": "https://bucurtur.md/",
-      "permanent": true
-    },
-
-    // 3. Preserve exact paths for all main files and subfolder (this handles most of your site!)
-    // Example: /despre-noi.html → https://bucurtur.md/despre-noi.html
-    //         /transport-moldova-italia/chisinau-italia.html → same on new site
     {
       "source": "/:path*",
       "destination": "https://bucurtur.md/:path*",
