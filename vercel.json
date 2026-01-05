@@ -1,8 +1,18 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
-      "destination": "https://www.bucurtur.md/:path*",
+      "source": "https://www.bucur-tur.com",
+      "destination": "https://bucurtur.md/$1",
+      "permanent": true
+    },
+    {
+      "source": "https://bucur-tur.com",
+      "destination": "https://bucurtur.md/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://bucurtur.md/$1",
       "permanent": true
     }
   ]
