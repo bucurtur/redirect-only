@@ -11,7 +11,7 @@
       "permanent": true
     },
     {
-      "source": "/(.*)",
+      "source": "/",
       "destination": "https://bucurtur.md/$1",
       "permanent": true
     }
