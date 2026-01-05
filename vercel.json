@@ -2,8 +2,15 @@
   "redirects": [
     {
       "source": "/:path*",
-      "destination": "https://www.bucurtur.md/:path*",
-      "permanent": true
+      "destination": "https://bucurtur.md/:path*",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "bucur-tur.com"
+        }
+      ]
     }
   ]
 }
