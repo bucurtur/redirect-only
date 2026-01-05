@@ -5,12 +5,12 @@
     { "source": "/contact.html",                  "destination": "https://www.bucurtur.md/",                               "permanent": true },
     { "source": "/cookie.html",                   "destination": "https://www.bucurtur.md/politica-de-confidentialitate.html", "permanent": true },
     { "source": "/index.html",                    "destination": "https://www.bucurtur.md/",                               "permanent": true },
-    { "source": "/italia-moldova.html",           "destination": "https://www.bucurtur.md/transport-moldova-italia/", "permanent": true },
-    { "source": "/moldova-italia.html",           "destination": "https://www.bucurtur.md/transport-moldova-italia/", "permanent": true },
+    { "source": "/italia-moldova.html",           "destination": "https://www.bucurtur.md/", "permanent": true },
+    { "source": "/moldova-italia.html",           "destination": "https://www.bucurtur.md/", "permanent": true },
     { "source": "/page-sidebar-left.html",        "destination": "https://www.bucurtur.md/",                               "permanent": true },
     { "source": "/single-destination.html",       "destination": "https://www.bucurtur.md/transport-moldova-italia/", "permanent": true },
-    { "source": "/transport-chisinau-italia.html","destination": "https://www.bucurtur.md/transport-moldova-italia/chisinau-italia.html", "permanent": true },
-    { "source": "/transport-italia-moldova.html", "destination": "https://www.bucurtur.md/transport-moldova-italia/", "permanent": true },
+    { "source": "/transport-chisinau-italia.html","destination": "https://www.bucurtur.md/", "permanent": true },
+    { "source": "/transport-italia-moldova.html", "destination": "https://www.bucurtur.md/", "permanent": true },
     { "source": "/transport-privat-italia.html",  "destination": "https://www.bucurtur.md/",                               "permanent": true },
 
     // Also catch the root explicitly
